@@ -1,0 +1,64 @@
+{
+  "platformName": "ios",
+  "userDevice": "iPhone 8",
+  "android": {
+      "automationName" :"uiautomator2",
+      "app": "/Users/bhavikshah/Documents/Workspace/HelloAppium/app/android/app_test_pepo.apk",
+      "devices": [
+        {
+          "type": "real",
+          "userDevice": "Moto_g5s_plus",
+          "deviceName": "ZY32285CBH",
+          "platformVersion": "8.1"
+        },
+        {
+          "type": "real",
+          "userDevice": "Nexus_5",
+          "deviceName": "063fdc73f0ea31e3",
+          "platformVersion": "6.0.1"
+        },
+        {
+          "type": "real",
+          "userDevice": "Pixel_3a",
+          "deviceName": "936AY0794J",
+          "platformVersion": "9.0"
+        },
+        {
+          "type": "virtual",
+          "userDevice": "Nexus_6_API_22",
+          "deviceName": "Nexus 6 API 22",
+          "platformVersion": "5.1"
+        }
+      ]
+    },
+  "ios": {
+    "automationName" :"XCUITest",
+    "app": "/Users/bhavikshah/Library/Developer/Xcode/DerivedData/Pepo2-axnmzjlmqrqpkpgyiryqjommqdis/Build/Products/Debug-iphonesimulator/Pepo2.app",
+    "devices": [
+      {
+        "type": "real",
+        "userDevice": "iPhone 11 Pro Max",
+        "deviceName": "iPhone 11 Pro Max",
+        "platformVersion": "13.2.2"
+      },
+      {
+        "type": "real",
+        "userDevice": "iPhone 8",
+        "deviceName": "iPhone 8",
+        "platformVersion": "12.0"
+      },
+      {
+        "type": "real",
+        "userDevice": "Soma",
+        "deviceName": "Soma",
+        "platformVersion": "12.4.3"
+      },
+      {
+        "type": "real",
+        "userDevice": "Yogesh’s iPhone",
+        "deviceName": "Yogesh’s iPhone",
+        "platformVersion": "12.4.3"
+      }
+    ]
+  }
+}
