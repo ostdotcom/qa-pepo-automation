@@ -1,5 +1,5 @@
 {
-  "platformName": "ios",
+  "platformName": "android",
   "userDevice": "iPhone 8",
   "android": {
       "automationName" :"uiautomator2",
