@@ -36,7 +36,7 @@ public class Hooks extends Base {
         capabilities.setCapability(Constant.CAPABILTIES.PLATFORMVERSION, ConfigDataManagers.platformOs.getdevice().platformVersion);
         capabilities.setCapability(Constant.CAPABILTIES.PLATFORMNAME, ConfigDataManagers.data.platformName);
         capabilities.setCapability(Constant.CAPABILTIES.AUTOMATIONNAME, ConfigDataManagers.platformOs.getAutomationName());
-        capabilities.setCapability(Constant.CAPABILTIES.APP, ConfigDataManagers.platformOs.getApp());
+        capabilities.setCapability(Constant.CAPABILTIES.APP, "/root/tmp/sample_apk/app_test_pepo.apk");
         capabilities.setCapability("setWebContentsDebuggingEnabled", "true");
         capabilities.setCapability("forceMjsonwp", true);
 

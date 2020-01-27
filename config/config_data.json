@@ -1,6 +1,6 @@
 {
-  "platformName": "android",
-  "userDevice": "iPhone 8",
+  "platformName": "ios",
+  "userDevice": "Yogesh’s iPhone",
   "android": {
       "automationName" :"uiautomator2",
       "app": "/Users/bhavikshah/Documents/Workspace/HelloAppium/app/android/app_test_pepo.apk",
@@ -28,6 +28,12 @@
           "userDevice": "Nexus_6_API_22",
           "deviceName": "Nexus 6 API 22",
           "platformVersion": "5.1"
+        },
+        {
+          "type": "virtual",
+          "userDevice": "Nexus 5",
+          "deviceName": "Nexus 5",
+          "platformVersion": "7.1.1"
         }
       ]
     },
