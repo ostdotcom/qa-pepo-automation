@@ -1,6 +1,6 @@
 {
-  "platformName": "ios",
-  "userDevice": "Yogesh’s iPhone",
+  "platformName": "android",
+  "userDevice": "Moto_g5s_plus",
   "android": {
       "automationName" :"uiautomator2",
       "app": "/Users/bhavikshah/Documents/Workspace/HelloAppium/app/android/app_test_pepo.apk",
@@ -39,7 +39,7 @@
     },
   "ios": {
     "automationName" :"XCUITest",
-    "app": "/Users/bhavikshah/Library/Developer/Xcode/DerivedData/Pepo2-axnmzjlmqrqpkpgyiryqjommqdis/Build/Products/Debug-iphonesimulator/Pepo2.app",
+    "app": "/Users/bhavikshah/Documents/Pepo-debug-qa/Payload/Pepo2.app",
     "devices": [
       {
         "type": "real",
@@ -57,13 +57,22 @@
         "type": "real",
         "userDevice": "Soma",
         "deviceName": "Soma",
-        "platformVersion": "12.4.3"
+        "udid": "6521d8bf3fdb0a9807e2ffbdd38e305cb3aa8d6c",
+        "platformVersion": "12.4"
       },
       {
         "type": "real",
         "userDevice": "Yogesh’s iPhone",
         "deviceName": "Yogesh’s iPhone",
-        "platformVersion": "12.4.3"
+        "udid": "febbf0321766126d362e3a8b2ee88be12798e7c4",
+        "platformVersion": "12.4"
+      },
+      {
+        "type": "virtual",
+        "userDevice": "iPhone_11",
+        "deviceName": "iPhone_11",
+        "udid": "90605B98-B121-48E0-A6FF-9E9725E6D5B9",
+        "platformVersion": "13.2"
       }
     ]
   }

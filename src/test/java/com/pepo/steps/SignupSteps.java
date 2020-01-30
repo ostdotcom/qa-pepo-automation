@@ -14,7 +14,7 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import org.json.JSONObject;
-import org.junit.Test;
+//import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -41,6 +41,7 @@ public class SignupSteps {
     @Given("User is not part of Pepo")
     public void make_user_ready_to_sign_up() {
 
+        // Need to identify user's current user_name to rotate
         HashMap<String, Object> params = new HashMap<>();
         params.put("token", "1169918663371026433-zDN48wJvmz2snspAH5C3i9q7tBfo78");
         params.put("secret", "J7zgG7LXMCMx6CJCsUBFGo6t2UXlvowky1ecuqudatw3C");
@@ -52,6 +53,8 @@ public class SignupSteps {
 
         String userName = jsonObject.getJSONObject("data").getJSONObject("users").getJSONObject(userId).get("user_name").toString();
 
+
+        // After getting the user_name rotate that user
         HashMap<String, Object> params1 = new HashMap<>();
         params1.put("user_name",userName);
         apiDrivers.rotateUsers(params1);

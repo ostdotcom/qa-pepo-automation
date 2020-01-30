@@ -36,6 +36,7 @@ public class Constant {
         public static final String PLATFORMNAME = "platformName";
         public static final String AUTOMATIONNAME = "automationName";
         public static final String APP = "app";
+        public static final String UDID = "udid";
     }
 
 

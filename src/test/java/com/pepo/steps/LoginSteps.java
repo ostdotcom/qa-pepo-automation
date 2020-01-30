@@ -28,8 +28,7 @@ public class LoginSteps {
 
 
     @Given("Launch the Pepo App")
-    public void
-    launchThePepoApp() throws Exception {
+    public void launchThePepoApp() throws Exception {
 
         // To-do : Need to remove
         Thread.sleep(1000);

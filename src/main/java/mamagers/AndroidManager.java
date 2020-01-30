@@ -38,5 +38,4 @@ public class AndroidManager implements PlatformOs {
         }
         return devicesManagers;
     }
-
 }

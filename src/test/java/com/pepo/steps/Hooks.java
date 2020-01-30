@@ -36,13 +36,13 @@ public class Hooks extends Base {
         capabilities.setCapability(Constant.CAPABILTIES.PLATFORMVERSION, ConfigDataManagers.platformOs.getdevice().platformVersion);
         capabilities.setCapability(Constant.CAPABILTIES.PLATFORMNAME, ConfigDataManagers.data.platformName);
         capabilities.setCapability(Constant.CAPABILTIES.AUTOMATIONNAME, ConfigDataManagers.platformOs.getAutomationName());
-        capabilities.setCapability(Constant.CAPABILTIES.APP, "/root/tmp/sample_apk/app_test_pepo.apk");
+        capabilities.setCapability(Constant.CAPABILTIES.UDID, ConfigDataManagers.platformOs.getdevice().udid);
+        capabilities.setCapability(Constant.CAPABILTIES.APP, ConfigDataManagers.platformOs.getApp());
         capabilities.setCapability("setWebContentsDebuggingEnabled", "true");
         capabilities.setCapability("forceMjsonwp", true);
-
+        capabilities.setCapability("useNewWDA", true);
 
         System.out.println(capabilities.toString());
-
 
         try {
             launchApp(capabilities);
@@ -70,8 +70,6 @@ public class Hooks extends Base {
             default:
                 throw new NotFoundException("Platform OS not found");
         }
-
         base.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
     }
 }

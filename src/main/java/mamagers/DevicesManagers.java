@@ -6,4 +6,5 @@ public class DevicesManagers {
     public String userDevice;
     public String deviceName;
     public String platformVersion;
+    public String udid;
 }

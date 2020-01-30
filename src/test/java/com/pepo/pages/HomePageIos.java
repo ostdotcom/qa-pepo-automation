@@ -32,10 +32,10 @@ public class HomePageIos extends HomePage {
 
     }
 
-    @Override
-    public void clickOnProfileIcon() {
-        profileIcon.click();
-    }
+//    @Override
+//    public void clickOnProfileIcon() {
+//        profileIcon.click();
+//    }
 
     @Override
     public void clickOnAuthorizeTwitter() {

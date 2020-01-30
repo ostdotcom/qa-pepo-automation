@@ -16,7 +16,7 @@ public class ApiDrivers {
 
 
     public void rotateUsers(HashMap<String, Object> queryParams){
-        getRequest(queryParams,"/api/v1/rotate-twitter-account" );
+        getRequest(queryParams,"/api/v1/rotate-account" );
     }
 
 

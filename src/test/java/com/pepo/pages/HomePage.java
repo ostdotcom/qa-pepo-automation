@@ -21,6 +21,9 @@ public abstract class HomePage {
     @FindBy(xpath = "test")
     private MobileElement test;
 
+    @FindBy(name = "home-tab")
+    private MobileElement home_tab;
+
 
     abstract public void getResult();
 
@@ -28,7 +31,12 @@ public abstract class HomePage {
 
     abstract public void clickOnHomeIcon();
 
-    abstract public void clickOnProfileIcon();
+    public void clickOnProfileIcon()
+    {
+       // home_tab.click();
+        driver.findElementByAccessibilityId("home-tab").click();
+        System.out.println("clicked on home");
+    }
 
     abstract public void clickOnAuthorizeTwitter();
 
@@ -39,10 +47,5 @@ public abstract class HomePage {
     abstract public String getSendPepoCoins();
 
     abstract public void waitTillWalletLoading();
-
-
-
-
-
 
 }
