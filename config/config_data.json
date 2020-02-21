@@ -1,15 +1,21 @@
 {
   "platformName": "android",
-  "userDevice": "Moto_g5s_plus",
+  "userDevice": "Nexus_6_API_22",
   "android": {
       "automationName" :"uiautomator2",
-      "app": "/Users/bhavikshah/Documents/Workspace/HelloAppium/app/android/app_test_pepo.apk",
+      "app": "/Users/bhavikshah/Documents/Workspace/HelloAppium/app/android/app-staging-1.0.3-release.apk",
       "devices": [
         {
           "type": "real",
           "userDevice": "Moto_g5s_plus",
           "deviceName": "ZY32285CBH",
           "platformVersion": "8.1"
+        },
+        {
+          "type": "real",
+          "userDevice": "Pixel_3_API_28",
+          "deviceName": "Pixel_3_API_28",
+          "platformVersion": "9"
         },
         {
           "type": "real",

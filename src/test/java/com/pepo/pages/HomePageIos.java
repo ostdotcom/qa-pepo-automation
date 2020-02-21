@@ -22,10 +22,10 @@ public class HomePageIos extends HomePage {
         System.out.println("In LoginIos page");
     }
 
-    @Override
-    public void clickOnQuickTip() {
-        gotItBtn.click();
-    }
+//    @Override
+//    public void clickOnQuickTip() {
+//        gotItBtn.click();
+//    }
 
     @Override
     public void clickOnHomeIcon() {
@@ -36,29 +36,29 @@ public class HomePageIos extends HomePage {
 //    public void clickOnProfileIcon() {
 //        profileIcon.click();
 //    }
+//
+//    @Override
+//    public void clickOnSendPepoIcon() {
+//
+//    }
 
-    @Override
-    public void clickOnAuthorizeTwitter() {
-
-    }
-
-    @Override
-    public void clickOnSendPepoIcon() {
-
-    }
-
-    @Override
-    public String getPepoBalance() {
-        return null;
-    }
+//    @Override
+//    public String getPepoBalance() {
+//        return null;
+//    }
 
     @Override
     public String getSendPepoCoins() {
         return null;
     }
 
+//    @Override
+//    public void waitTillWalletLoading() {
+//
+//    }
+
     @Override
-    public void waitTillWalletLoading() {
+    public void acceptAlert() {
 
     }
 

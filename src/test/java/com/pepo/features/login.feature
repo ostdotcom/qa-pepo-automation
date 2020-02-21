@@ -2,12 +2,24 @@ Feature: Start with First Android
 
 
 
-  Scenario: Login scenario
+  Scenario: Login with Twitter scenario
     Given Launch the Pepo App
     When User login with twitter login
     Then User should be logged in successfully
     And User should able to navigate to profile page
     Then User should able to navigate to notification page and accept the terms page
+
+
+  Scenario: Login with Github scenario
+    Given Launch the Pepo App
+    When User login with twitter login
+    Then User should be logged in successfully
+
+  Scenario: Login with Gmail scenario
+    Given Launch the Pepo App
+    When User login with twitter login
+    Then User should be logged in successfully
+
 #
 #
 #

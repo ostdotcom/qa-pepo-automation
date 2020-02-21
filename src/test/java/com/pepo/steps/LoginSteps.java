@@ -69,6 +69,7 @@ public class LoginSteps {
     @Then("User should be logged in successfully")
     public void userShouldBeLoggedInSuccessfully() {
 
+        // To-do : Write to verify user is logged successfully.
 
     }
 

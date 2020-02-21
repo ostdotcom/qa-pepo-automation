@@ -38,6 +38,7 @@ public class ApiDrivers {
 
         Response response = given()
                 .queryParams(queryParams)
+                .log().all()
                 .when()
                 .log().all()
                 .get("http://stagingpepo.com"+apiPath)

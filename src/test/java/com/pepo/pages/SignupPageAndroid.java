@@ -10,10 +10,10 @@ import java.awt.event.KeyEvent;
 public class SignupPageAndroid extends SignupPage {
 
 
-    @FindBy(xpath = "//android.widget.EditText[contains(@text,'email@gmail.com')]")
+    @FindBy(xpath = "//*[contains(@text,'email@gmail.com')]")
     private MobileElement emailTb;
 
-    @FindBy(xpath = "//android.widget.TextView[contains(@text,'Sign Up')]")
+    @FindBy(xpath = "//*[contains(@text,'Sign Up')]")
     private MobileElement signupBtn;
 
     @FindBy(xpath = "//android.widget.TextView[contains(@text,'OK')]")

@@ -39,6 +39,7 @@ public class Hooks extends Base {
         capabilities.setCapability(Constant.CAPABILTIES.UDID, ConfigDataManagers.platformOs.getdevice().udid);
         capabilities.setCapability(Constant.CAPABILTIES.APP, ConfigDataManagers.platformOs.getApp());
         capabilities.setCapability("setWebContentsDebuggingEnabled", "true");
+        capabilities.setCapability("newCommandTimeout", 180);
         capabilities.setCapability("forceMjsonwp", true);
         capabilities.setCapability("useNewWDA", true);
 

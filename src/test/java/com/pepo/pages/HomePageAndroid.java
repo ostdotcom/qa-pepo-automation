@@ -16,13 +16,11 @@ public class HomePageAndroid extends HomePage {
 
 
 
-    @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView | /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View[3] | /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView | /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView")
-    private MobileElement quickAcceptTip;
 
     @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View[2]/android.view.View[5]/android.widget.ImageView | /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[5]/android.widget.ImageView")
     private MobileElement profileIcn;
 
-    @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView | /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView" )
+    @FindBy(xpath = "//*[contains(text(),'Continue with Twitter')]" )
     private MobileElement twitterConnectBtn;
 
     @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.ImageView")
@@ -36,16 +34,17 @@ public class HomePageAndroid extends HomePage {
 
 
 
+
     @Override
     public void getResult() {
 
         System.out.println("In HomePageAndroid");
     }
 
-    @Override
-    public void clickOnQuickTip() {
-        quickAcceptTip.click();
-    }
+//    @Override
+//    public void clickOnQuickTip() {
+//
+//    }
 
     @Override
     public void clickOnHomeIcon() {
@@ -57,36 +56,36 @@ public class HomePageAndroid extends HomePage {
 //        profileIcn.click();
 //    }
 
-    @Override
-    public void clickOnAuthorizeTwitter() {
-        twitterConnectBtn.click();
-    }
+//    @Override
+//    public void clickOnSendPepoIcon() {
+//        sendPepoIcn.click();
+//    }
 
-    @Override
-    public void clickOnSendPepoIcon() {
-        sendPepoIcn.click();
-    }
-
-    @Override
-    public String getPepoBalance() {
+//    @Override
+//    public String getPepoBalance() {
+////        WebDriverWait wait = new WebDriverWait(driver, 15);
+////        String bal = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView"))).getText();
+//
 //        WebDriverWait wait = new WebDriverWait(driver, 15);
-//        String bal = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView"))).getText();
-
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        return wait.until(ExpectedConditions.elementToBeClickable(pepoWalletBalance)).getText();
-
-    }
+//        return wait.until(ExpectedConditions.elementToBeClickable(pepoWalletBalance)).getText();
+//
+//    }
 
     @Override
     public String getSendPepoCoins() {
         return null;
     }
 
-    @Override
-    public void waitTillWalletLoading() {
+//    @Override
+//    public void waitTillWalletLoading() {
+//
+//        WebDriverWait wait = new WebDriverWait(driver,120);
+//        wait.until(ExpectedConditions.elementToBeClickable(walletIcn));
+//    }
 
-        WebDriverWait wait = new WebDriverWait(driver,120);
-        wait.until(ExpectedConditions.elementToBeClickable(walletIcn));
+    @Override
+    public void acceptAlert() {
+        driver.findElement(By.id("android:id/button1")).click();
     }
 
 }

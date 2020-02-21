@@ -30,6 +30,10 @@ import static java.time.Duration.ofSeconds;
 
 public class SignupSteps {
 
+    private static final String twitter = "twitter";
+    private static final String gmail = "gmail";
+    private static final String apple = "apple";
+    private static final String github = "github";
     private Base base;
     ApiDrivers apiDrivers = new ApiDrivers();
 
@@ -61,14 +65,33 @@ public class SignupSteps {
     }
 
 
-    @Given("User is ready to signup in app")
-    public void userIsReadyToSignupInApp() throws InterruptedException {
+    @Given("User is ready to signup in app via (.+)")
+    public void userIsReadyToSignupInApp(String login_platform) throws InterruptedException {
+
+        base.platform.getHomePage().acceptAlert();
 
         base.platform.getHomePage().clickOnQuickTip();
 
         base.platform.getHomePage().clickOnProfileIcon();
 
-        base.platform.getHomePage().clickOnAuthorizeTwitter();
+        switch (login_platform.toLowerCase()){
+
+            case twitter:
+                base.platform.getHomePage().clickOnAuthorizeTwitter();
+                break;
+
+            case gmail:
+                //base.platform.getHomePage().clickOnAuthorizeTwitter();
+                break;
+
+            case apple:
+                //base.platform.getHomePage().clickOnAuthorizeTwitter();
+                break;
+
+            case github:
+                //base.platform.getHomePage().clickOnAuthorizeTwitter();
+                break;
+        }
 
         // To-do : Need to remove
         Thread.sleep(1000);
@@ -79,69 +102,38 @@ public class SignupSteps {
     @When("User authorised with twitter credentials")
     public void userAuthorisedWithTwitterCredentials() throws InterruptedException {
 
+        Thread.sleep(1000);
         base.platform.getHelperPage().switchContext();
+        Thread.sleep(1000);
 
-        try{
-            base.platform.getTwitterConnectPage().loginWithEmailTwitter("bhavik@ost.com","ostkit@1234");
-        }
-        catch (Exception e)
-        {
-            base.platform.getHelperPage().scrollToBottom();
-            base.platform.getTwitterConnectPage().clickOnOkBtn();
-        }
+
+        base.platform.getTwitterConnectPage().loginWithEmailTwitter("BhavikPepo","ostkit@1234");
+
+
     }
 
     @And("User will setup and confirm PIN")
     public void userWillSetupAndConfirmPIN() throws InterruptedException {
 
-        Thread.sleep(10000);
+        Thread.sleep(1000);
+        base.platform.getHelperPage().switchToNative();
         System.out.println("Write email if it is there");
 
         try
         {
             base.platform.getSignUpPage().enterEmailAndOk("abc@ost.com");
 
-//            base.driver.findElement(By.xpath("//android.widget.EditText[contains(@text,'email@gmail.com')]")).sendKeys("abc@abc.com");
-//            base.driver.findElement(By.xpath("//android.widget.TextView[contains(@text,'Sign Up')]")).click();
-//
-//            // Confirm email
-//
-//            base.driver.findElement(By.xpath("//android.widget.TextView[contains(@text,'OK')]")).click();
         }
         catch (NoSuchElementException e)
         {
             System.out.println("Email is already associated with Twitter account");
         }
 
-
-
         base.platform.getSignUpPage().clickOnAddToWallet();
         //((AndroidDriver)base.driver).findElement(By.xpath("//android.widget.TextView[contains(@text,'Add to Wallet')]")).click();
 
         //Enter PIN
         base.platform.getSignUpPage().setAndConfirmPin();
-
-//        Thread.sleep(500);
-//        //base.driver.pressKey(new KeyEvent());
-//        ((AndroidDriver)base.driver).pressKeyCode(KeyEvent.VK_1);
-//
-//        System.out.println("pin digit: " + KeyEvent.VK_1);
-//        ((AndroidDriver)base.driver).pressKeyCode(KeyEvent.VK_1);
-//        ((AndroidDriver)base.driver).pressKeyCode(KeyEvent.VK_1);
-//        ((AndroidDriver)base.driver).pressKeyCode(KeyEvent.VK_1);
-//        ((AndroidDriver)base.driver).pressKeyCode(KeyEvent.VK_1);
-//        ((AndroidDriver)base.driver).pressKeyCode(KeyEvent.VK_1);
-//
-//        System.out.println("pin digit: " +KeyEvent.VK_1);
-//
-//
-//        Thread.sleep(500);
-//        ((AndroidDriver)base.driver).pressKeyCode(KeyEvent.VK_1);
-//        ((AndroidDriver)base.driver).pressKeyCode(KeyEvent.VK_1);
-//        ((AndroidDriver)base.driver).pressKeyCode(KeyEvent.VK_1);
-//        ((AndroidDriver)base.driver).pressKeyCode(KeyEvent.VK_1);
-//        ((AndroidDriver)base.driver).pressKeyCode(KeyEvent.VK_1);
-//        ((AndroidDriver)base.driver).pressKeyCode(KeyEvent.VK_1);
 
     }
 
@@ -166,6 +158,7 @@ public class SignupSteps {
     @Then("User has balance of {int} pepos")
     public void userIsHasBalanceOfPepos(int airdropAmnt) throws Exception {
 
+       Thread.sleep(100000);
         if(base.platform.getHomePage().getPepoBalance().equalsIgnoreCase(airdropAmnt+""))
         {
             System.out.println("Balance credited");

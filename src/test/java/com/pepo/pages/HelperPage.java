@@ -24,8 +24,20 @@ public abstract class HelperPage {
         for (String context : availableContexts) {
             if (context.contains("WEBVIEW")) {
                 System.out.println("Context Name is " + context);
-                // 4.3 Call context() method with the id of the context you want to access and change it to WEBVIEW_1
-                //(This puts Appium session into a mode where all commands are interpreted as being intended for automating the web view)
+                Thread.sleep(1000);
+                driver.context(context);
+                break;
+            }
+        }
+    }
+
+    public void switchToNative() throws InterruptedException {
+        Set<String> availableContexts = driver.getContextHandles();
+        System.out.println("Total No of Context Found = " + availableContexts.size());
+        System.out.println("All Context Found After we reach to Native = " + availableContexts);
+        for (String context : availableContexts) {
+            if (context.contains("NATIVE_APP")) {
+                System.out.println("Context Name is " + context);
                 Thread.sleep(1000);
                 driver.context(context);
                 break;

@@ -5,7 +5,7 @@ Feature: User sign up for the first time
 
 
     Scenario: Activate new user and transfer pepo
-      Given User is ready to signup in app
+      Given User is ready to signup in app via twitter
       When User authorised with twitter credentials
       And User will setup and confirm PIN
       Then User should navigate to feed page
