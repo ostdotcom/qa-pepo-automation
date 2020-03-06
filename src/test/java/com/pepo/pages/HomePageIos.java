@@ -22,45 +22,8 @@ public class HomePageIos extends HomePage {
         System.out.println("In LoginIos page");
     }
 
-//    @Override
-//    public void clickOnQuickTip() {
-//        gotItBtn.click();
-//    }
-
-    @Override
-    public void clickOnHomeIcon() {
-
-    }
-
-//    @Override
-//    public void clickOnProfileIcon() {
-//        profileIcon.click();
-//    }
-//
-//    @Override
-//    public void clickOnSendPepoIcon() {
-//
-//    }
-
-//    @Override
-//    public String getPepoBalance() {
-//        return null;
-//    }
-
-    @Override
-    public String getSendPepoCoins() {
-        return null;
-    }
-
-//    @Override
-//    public void waitTillWalletLoading() {
-//
-//    }
-
     @Override
     public void acceptAlert() {
 
     }
-
-
 }

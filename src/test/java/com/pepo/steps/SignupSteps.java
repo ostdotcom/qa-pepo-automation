@@ -64,52 +64,15 @@ public class SignupSteps {
         apiDrivers.rotateUsers(params1);
     }
 
+    @When("User signup with twitter credentials")
+    public void user_signup_twitter() throws InterruptedException {
 
-    @Given("User is ready to signup in app via (.+)")
-    public void userIsReadyToSignupInApp(String login_platform) throws InterruptedException {
-
-        base.platform.getHomePage().acceptAlert();
-
-        base.platform.getHomePage().clickOnQuickTip();
-
-        base.platform.getHomePage().clickOnProfileIcon();
-
-        switch (login_platform.toLowerCase()){
-
-            case twitter:
-                base.platform.getHomePage().clickOnAuthorizeTwitter();
-                break;
-
-            case gmail:
-                //base.platform.getHomePage().clickOnAuthorizeTwitter();
-                break;
-
-            case apple:
-                //base.platform.getHomePage().clickOnAuthorizeTwitter();
-                break;
-
-            case github:
-                //base.platform.getHomePage().clickOnAuthorizeTwitter();
-                break;
-        }
-
-        // To-do : Need to remove
-        Thread.sleep(1000);
-
-
-    }
-
-    @When("User authorised with twitter credentials")
-    public void userAuthorisedWithTwitterCredentials() throws InterruptedException {
+        base.platform.getHomePage().clickOnAuthorizeTwitter();
 
         Thread.sleep(1000);
         base.platform.getHelperPage().switchContext();
         Thread.sleep(1000);
-
-
         base.platform.getTwitterConnectPage().loginWithEmailTwitter("BhavikPepo","ostkit@1234");
-
-
     }
 
     @And("User will setup and confirm PIN")

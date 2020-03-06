@@ -14,6 +14,8 @@ public abstract class ProfilePage {
 
 
 
+
+
     public ProfilePage(AppiumDriver driver)
     {
         this.driver=driver;

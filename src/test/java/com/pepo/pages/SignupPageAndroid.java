@@ -16,10 +16,10 @@ public class SignupPageAndroid extends SignupPage {
     @FindBy(xpath = "//*[contains(@text,'Sign Up')]")
     private MobileElement signupBtn;
 
-    @FindBy(xpath = "//android.widget.TextView[contains(@text,'OK')]")
+    @FindBy(xpath = "//*[contains(@text,'OK')]")
     private MobileElement okBtn;
 
-    @FindBy(xpath = "//android.widget.TextView[contains(@text,'Add to Wallet')]")
+    @FindBy(xpath = "//*[contains(@text,'Add to Wallet')]")
     private MobileElement addWalletBtn;
 
 

@@ -13,4 +13,14 @@ public class HelperPageIos extends HelperPage {
     public void scrollToBottom() {
 
     }
+
+    @Override
+    public void scrollDownToText(String text) {
+
+    }
+
+    @Override
+    public void swipeLeft() {
+
+    }
 }

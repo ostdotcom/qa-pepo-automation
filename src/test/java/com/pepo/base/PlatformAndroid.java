@@ -36,4 +36,14 @@ public class PlatformAndroid  implements PlatformConstants {
     public SignupPage getSignUpPage() {
         return new SignupPageAndroid(driver);
     }
+
+    @Override
+    public BottomNavigationPage getBottomNavigationPage() {
+        return new BottomNavigationPage(driver);
+    }
+
+    @Override
+    public SearchPage getSearchPage() {
+        return new SearchPageAndroid(driver);
+    }
 }

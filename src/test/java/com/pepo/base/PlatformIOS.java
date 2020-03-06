@@ -40,4 +40,15 @@ public class PlatformIOS implements PlatformConstants {
     public SignupPage getSignUpPage() {
         return new SignupPageIos(driver);
     }
+
+    @Override
+    public BottomNavigationPage getBottomNavigationPage() {
+        return new BottomNavigationPage(driver);
+    }
+
+    @Override
+    public SearchPage getSearchPage() {
+        return new SearchPageIos(driver) {
+        };
+    }
 }

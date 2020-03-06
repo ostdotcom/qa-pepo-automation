@@ -37,51 +37,8 @@ public class HomePageAndroid extends HomePage {
 
     @Override
     public void getResult() {
-
         System.out.println("In HomePageAndroid");
     }
-
-//    @Override
-//    public void clickOnQuickTip() {
-//
-//    }
-
-    @Override
-    public void clickOnHomeIcon() {
-
-    }
-
-//    @Override
-//    public void clickOnProfileIcon() {
-//        profileIcn.click();
-//    }
-
-//    @Override
-//    public void clickOnSendPepoIcon() {
-//        sendPepoIcn.click();
-//    }
-
-//    @Override
-//    public String getPepoBalance() {
-////        WebDriverWait wait = new WebDriverWait(driver, 15);
-////        String bal = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView"))).getText();
-//
-//        WebDriverWait wait = new WebDriverWait(driver, 15);
-//        return wait.until(ExpectedConditions.elementToBeClickable(pepoWalletBalance)).getText();
-//
-//    }
-
-    @Override
-    public String getSendPepoCoins() {
-        return null;
-    }
-
-//    @Override
-//    public void waitTillWalletLoading() {
-//
-//        WebDriverWait wait = new WebDriverWait(driver,120);
-//        wait.until(ExpectedConditions.elementToBeClickable(walletIcn));
-//    }
 
     @Override
     public void acceptAlert() {

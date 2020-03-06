@@ -14,4 +14,8 @@ public  interface PlatformConstants {
 
       SignupPage getSignUpPage();
 
+      BottomNavigationPage getBottomNavigationPage();
+
+      SearchPage getSearchPage();
+
 }

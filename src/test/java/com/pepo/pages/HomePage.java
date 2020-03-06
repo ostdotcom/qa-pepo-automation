@@ -49,14 +49,6 @@ public abstract class HomePage {
         quickAcceptTip.click();
     }
 
-    abstract public void clickOnHomeIcon();
-
-    public void clickOnProfileIcon()
-    {
-        driver.findElementByAccessibilityId("custom-navigation-tab-profile").click();
-        System.out.println("clicked on profile");
-    }
-
     public void clickOnAuthorizeTwitter()
     {
         twitterConnectBtn.click();
@@ -91,9 +83,6 @@ public abstract class HomePage {
             return walletIcon.getText();
         }
     }
-
-    abstract public String getSendPepoCoins();
-
     public void waitTillWalletLoading()
     {
         WebDriverWait wait = new WebDriverWait(driver,120);

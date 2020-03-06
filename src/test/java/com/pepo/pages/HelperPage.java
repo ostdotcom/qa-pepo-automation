@@ -46,4 +46,8 @@ public abstract class HelperPage {
     }
 
     abstract public void scrollToBottom();
+
+    abstract public void scrollDownToText(String text);
+
+    public abstract void swipeLeft();
 }
